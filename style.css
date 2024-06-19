@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(251, 211, 124);
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "left-side right-side ";
+  grid-template-columns: 1fr 1fr;
+  height: 85%;
+  width: 80%;
+  padding: 40px;
+  margin: auto;
+}
+.right-side {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  grid-area: right-side;
+}
+
+.right-side img {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.left-side {
+  grid-area: left-side;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: rgb(233, 101, 18);
+  display: grid;
+  grid-template-areas:
+    "title"
+    "name"
+    "email"
+    "textarea"
+    "sendBtn";
+  grid-template-rows: 2fr 1fr 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.textarea {
+  grid-area: textarea;
+}
+
+.sendBtn {
+  grid-area: sendBtn;
+}
+
+h1 {
+  width: 350px;
+  color: rgb(191, 255, 0);
+  text-align: center;
+  margin: auto;
+}
+
+.name,
+.email,
+.textarea {
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  margin: 0 auto;
+}
+
+input::placeholder {
+  color: red;
+  padding: 20px;
+}
+
+.sendBtn {
+  border-radius: 40px;
+  border: none;
+  width: 300px;
+  color: red;
+  margin: 0 auto;
+}
+
+.sendBtn:hover {
+  background-color: rgb(213, 136, 34);
+  color: white;
+}
